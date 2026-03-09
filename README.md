@@ -2,9 +2,9 @@
 
 ## Overview
 
-This Task List project was created to strengthen my understanding of TypeScript and how it improves reliability, structure, and maintainability in JavaScript-based applications. By building a practical application, I focused on learning how TypeScript supports stronger typing, modular code organization, and safer program design. 
+As a software engineer, I am continually expanding my ability to work with modern programming languages and tools. Task List software program was created to strengthen my understanding of TypeScript and how it improves reliability, structure, and maintainability in JavaScript-based applications. By building a practical application, I focused on learning how TypeScript supports stronger typing, modular code organization, and safer program design. 
 
-The software I developed is a TypeScript Task List application that runs in the terminal. It allows users to manage tasks interactively by adding new tasks, creating subtasks, editing tasks, toggling completion status, deleting tasks, and viewing task statistics. All output is displayed directly in the terminal, demonstrating how a TypeScript application can operate as a command-line tool. Tasks are stored in lists and can contain nested subtasks, allowing the program to demonstrate recursion when searching, counting, or modifying tasks.
+Developing a TypeScript Task List application that runs in the terminal that allows users to manage tasks interactively by adding new tasks, creating subtasks, editing tasks, toggling completion status, deleting tasks, and viewing task statistics. All output is displayed directly in the terminal, demonstrating how a TypeScript application can operate as a command-line tool. Tasks are stored in lists and can contain nested subtasks, allowing the program to demonstrate recursion when searching, counting, or modifying tasks.
 
 It also demonstrates several important programming concepts used in modern software development. Using classes to organize the task management and storage logic, lists to store collections of tasks and subtasks, and recursive functions to navigate nested task structures. Asynchronous functions are used to load and save tasks from a JSON file, ensuring that file operations do not block the application. The software also demonstrates throwing and handling exceptions, which helps ensure that invalid inputs and missing tasks are handled safely without crashing the program.
 
@@ -33,6 +33,33 @@ The project includes two ways to run the program:
 Task Lists software was developed using Visual Studio Code as the primary development environment. Built and tested locally using Node.js and managed using npm for dependency management. Git and GitHub were used for version control and to publish the project repository.
 
 My programming language used in this project is TypeScript, which is a strongly typed superset of JavaScript. TypeScript allowed me to define types, interfaces, and classes that help prevent common programming errors, improving my code readability. Task Lists uses the Node.js runtime environment along with the built-in Node modules such as fs for file handling and readline for interactive terminal input. TypeScript compiler (tsc) was used to compile the TypeScript source code into JavaScript before execution.
+
+## Project Structure
+
+taskLists
+│
+├── data/
+│   └── tasks.json          # JSON file storing task data
+│
+├── dist/                   # Compiled JavaScript output from TypeScript
+│
+├── node_modules/           # Installed project dependencies
+│
+├── src/                    # Main TypeScript source code
+│   ├── cli.ts              # CLI demo showing terminal output
+│   ├── interactive.ts      # Interactive task manager
+│   ├── errors.ts           # Custom error classes
+│   ├── sampleData.ts       # Example task data
+│   ├── storage.ts          # Async task storage service
+│   ├── taskManager.ts      # Core TaskManager class
+│   ├── types.ts            # TypeScript interfaces and types
+│   └── utils.ts            # Utility functions including recursion
+│
+├── .gitignore              # Files excluded from Git
+├── package.json            # Project configuration and scripts
+├── README.md               # Project documentation
+└── tsconfig.json           # TypeScript compiler configuration
+
 
 ## Useful Websites
 
