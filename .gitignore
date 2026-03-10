@@ -8,6 +8,11 @@ node_modules/
 # These files are automatically generated with `npm run build`.
 dist/
 
+# Ignore test coverage reports
+# Browser build output
+# These files are generated when building the project for the web.
+web-dist/
+
 # Ignore environment variable files
 # These sometimes contain sensitive information like API keys.
 # This project does not use one, but it is good practice to ignore it.

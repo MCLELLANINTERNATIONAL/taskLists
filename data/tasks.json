@@ -16,7 +16,7 @@
       {
         "id": "task-101-2",
         "title": "Implement recursive functions",
-        "completed": true,
+        "completed": false,
         "priority": "Medium",
         "subtasks": []
       }
@@ -26,46 +26,15 @@
     "id": "task-102",
     "title": "Prepare README.md",
     "completed": false,
-    "priority": "High",
+    "priority": "Medium",
     "dueDate": "2026-03-13",
-    "subtasks": [
-      {
-        "id": "task-1773093459520-972",
-        "title": "Write requirement checklist section",
-        "completed": false,
-        "priority": "Medium",
-        "subtasks": []
-      }
-    ]
+    "subtasks": []
   },
   {
     "id": "task-103",
     "title": "Test terminal output",
     "completed": true,
     "priority": "Low",
-    "subtasks": []
-  },
-  {
-    "id": "task-1773093459520-891",
-    "title": "Practice TypeScript classes",
-    "completed": false,
-    "priority": "High",
-    "dueDate": "2026-03-15",
-    "subtasks": []
-  },
-  {
-    "id": "task-1773093558917-389",
-    "title": "Shopping",
-    "completed": false,
-    "priority": "Medium",
-    "dueDate": "2026-03-10",
-    "subtasks": []
-  },
-  {
-    "id": "task-1773094027320-52",
-    "title": "research",
-    "completed": false,
-    "priority": "High",
     "subtasks": []
   }
 ]
