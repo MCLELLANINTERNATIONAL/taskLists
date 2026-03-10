@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript Task List</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>TypeScript Task List</h1>
+      <p class="subtitle">Browser version powered by TypeScript + Vite</p>
+
+      <section class="panel">
+        <h2>Add a Task</h2>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="title">Task Title</label>
+            <input id="title" type="text" placeholder="Enter task title" />
+          </div>
+
+          <div class="form-group">
+            <label for="priority">Priority</label>
+            <select id="priority">
+              <option value="Low">Low</option>
+              <option value="Medium" selected>Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="dueDate">Due Date</label>
+            <input id="dueDate" type="date" />
+          </div>
+
+          <div class="form-group">
+            <label for="add-btn">Add Task</label>
+            <button id="add-btn" type="button">Add Task</button>
+          </div>
+
+          <div class="form-group">
+            <label for="reset-btn">Reset Browser List</label>
+            <button id="reset-btn" type="button">Reset</button>
+          </div>
+        </div>
+
+        <p id="message" class="message" aria-live="polite"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Filters</h2>
+        <div class="filters">
+          <button data-filter="All" type="button">All</button>
+          <button data-filter="Active" type="button">Active</button>
+          <button data-filter="Completed" type="button">Completed</button>
+        </div>
+      </section>
+
+      <section class="panel stats">
+        <h2>Statistics</h2>
+        <p>Root tasks: <span id="total-count">0</span></p>
+        <p>Completed root tasks: <span id="complete-count">0</span></p>
+        <p>All tasks including subtasks: <span id="all-count">0</span></p>
+        <p>Completion percentage: <span id="percent">0%</span></p>
+      </section>
+
+      <section class="panel">
+        <h2>Tasks</h2>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="/src/web.ts"></script>
+  </body>
+</html>

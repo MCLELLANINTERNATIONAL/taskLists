@@ -1,1 +1,31 @@
-{"name":"typescript-tasklist","version":"1.0.0","description":"CSE 310 TypeScript task list project with demo and interactive CLI","main":"dist/cli.js","scripts":{"build":"tsc","start":"node dist/cli.js","demo":"node dist/cli.js","interactive":"node dist/interactive.js","dev":"tsc --watch"},"keywords":["typescript","task-list","cse310"],"author":"Kim Brown","license":"MIT","devDependencies":{"@types/node":"^22.19.15","typescript":"^5.9.3"}}
+{
+    "name": "typescript-tasklist",
+    "version": "1.0.0",
+    "description": "TypeScript task list project with demo CLI, interactive CLI, and browser app",
+    "main": "dist/cli.js",
+    "scripts": {
+        "build": "npm run build:node && npm run build:web",
+        "build:node": "tsc",
+        "build:web": "vite build",
+        "start": "node dist/cli.js",
+        "demo": "node dist/cli.js",
+        "interactive": "node dist/interactive.js",
+        "web": "vite",
+        "preview": "vite preview"
+    },
+    "keywords": [
+        "typescript",
+        "task-list",
+        "cse310"
+    ],
+    "author": "Kim Brown",
+    "license": "MIT",
+    "dependencies": {
+        "dayjs": "^1.11.13"
+    },
+    "devDependencies": {
+        "@types/node": "^22.19.15",
+        "typescript": "^5.9.3",
+        "vite": "^5.4.10"
+    }
+}

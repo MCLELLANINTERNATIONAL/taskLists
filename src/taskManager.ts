@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import { Task, TaskFilter, Priority } from "./types";
 import { TaskNotFoundError, TaskValidationError } from "./errors";
 import {
@@ -153,28 +154,22 @@ export class TaskManager {
   }
 
   /**
-   * Validates due date format if provided.
+   * Validates due date format if provided using dayjs.
    */
   private validateDueDate(dueDate?: string): void {
     if (!dueDate) {
       return;
     }
 
-    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+    const parsed = dayjs(dueDate, "YYYY-MM-DD", true);
 
-    if (!dateRegex.test(dueDate)) {
-      throw new TaskValidationError('Due date must be in the format "YYYY-MM-DD".');
-    }
-
-    const parsed = new Date(dueDate);
-
-    if (Number.isNaN(parsed.getTime())) {
-      throw new TaskValidationError("Due date is not a valid calendar date.");
+    if (!parsed.isValid()) {
+      throw new TaskValidationError('Due date must be a valid date in the format "YYYY-MM-DD".');
     }
   }
 
   /**
-   * Generates a unique task id.
+   * Generates a simple unique task id.
    */
   private generateId(): string {
     return `task-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
