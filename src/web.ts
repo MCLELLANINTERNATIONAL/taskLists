@@ -3,6 +3,7 @@ import { TaskManager } from "./taskManager";
 import { Task, Priority, TaskFilter } from "./types";
 import { countAllTasks, getCompletionPercentage } from "./utils";
 import { TaskNotFoundError, TaskValidationError } from "./errors";
+import { sampleTasks } from "./sampleData";
 import "./styles.css";
 
 /**
@@ -19,6 +20,13 @@ class BrowserStorageService {
   public async saveTasks(tasks: Task[]): Promise<void> {
     localStorage.setItem(this.storageKey, JSON.stringify(tasks));
   }
+}
+
+/**
+ * Creates a deep copy so the browser version can safely use starter data.
+ */
+function cloneSampleTasks(): Task[] {
+  return JSON.parse(JSON.stringify(sampleTasks)) as Task[];
 }
 
 const storage = new BrowserStorageService();
@@ -47,6 +55,10 @@ async function init(): Promise<void> {
 
   if (savedTasks.length > 0) {
     manager.setTasks(savedTasks);
+  } else {
+    const starterTasks = cloneSampleTasks();
+    manager.setTasks(starterTasks);
+    await storage.saveTasks(starterTasks);
   }
 
   attachEvents();
@@ -87,10 +99,11 @@ function attachEvents(): void {
   });
 
   resetButton.addEventListener("click", async () => {
-    manager.setTasks([]);
+    const starterTasks = cloneSampleTasks();
+    manager.setTasks(starterTasks);
     await storage.saveTasks(manager.getTasks());
     renderTasks(manager.filterTasks(currentFilter));
-    showMessage("Browser task list reset.", false);
+    showMessage("Browser task list reset to sample tasks.", false);
   });
 }
 
