@@ -16,7 +16,8 @@ GitHub: https://github.com/MCLELLANINTERNATIONAL/taskLists
 
 ## Video: 
    Code Walkthrough and Software Demo in Terminal https://www.loom.com/share/d59dbb30b51540ffbe91665160c27f6c
-   Terminal Intractive Software code and Browser Software Code functionality demonstartion 
+   (2min 35s)
+   Terminal Intractive Software code and Browser Software Code functionality demonstartion  https://www.loom.com/share/ee412c0a0fce46baa77898fafc0409a9 (2min 10s)
 
 ## Software Demo
 

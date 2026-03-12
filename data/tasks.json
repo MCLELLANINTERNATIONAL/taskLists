@@ -16,22 +16,6 @@
       {
         "id": "task-101-2",
         "title": "Implement recursive functions",
-        "completed": true,
-        "priority": "Medium",
-        "subtasks": []
-      }
-    ]
-  },
-  {
-    "id": "task-102",
-    "title": "Prepare final README.md",
-    "completed": false,
-    "priority": "High",
-    "dueDate": "2026-03-16",
-    "subtasks": [
-      {
-        "id": "task-1773327126653-71",
-        "title": "Write requirement checklist section",
         "completed": false,
         "priority": "Medium",
         "subtasks": []
@@ -39,18 +23,18 @@
     ]
   },
   {
+    "id": "task-102",
+    "title": "Prepare README.md",
+    "completed": false,
+    "priority": "Medium",
+    "dueDate": "2026-03-13",
+    "subtasks": []
+  },
+  {
     "id": "task-103",
     "title": "Test terminal output",
     "completed": true,
     "priority": "Low",
-    "subtasks": []
-  },
-  {
-    "id": "task-1773327126653-966",
-    "title": "Practice TypeScript classes",
-    "completed": false,
-    "priority": "High",
-    "dueDate": "2026-03-15",
     "subtasks": []
   }
 ]
