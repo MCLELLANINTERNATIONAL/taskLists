@@ -12,6 +12,12 @@ My purpose of creating this software was to gain hands-on experience with TypeSc
 
 In addition to the terminal-based application, this project also includes a browser version that allows the task list to be viewed and interacted with through a web interface. The browser version demonstrates how the same TypeScript logic can be reused to support both command-line and web environments.
 
+GitHub: https://github.com/MCLELLANINTERNATIONAL/taskLists
+
+## Video: 
+   Code Walkthrough and Software Demo in Terminal https://www.loom.com/share/d59dbb30b51540ffbe91665160c27f6c
+   Terminal Intractive Software code and Browser Software Code functionality demonstartion 
+
 ## Software Demo
 
 The project includes two ways to run the program:
